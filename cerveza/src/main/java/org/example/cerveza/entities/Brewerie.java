@@ -9,7 +9,7 @@ import java.util.List;
 @NoArgsConstructor @AllArgsConstructor
 @Getter @Setter
 @Builder
-@Table(name = "breeweries")
+@Table(name = "breweries")
 public class Brewerie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +19,6 @@ public class Brewerie {
     private String locatiion;
     private String description;
 
-    @OneToMany(mappedBy = "breewerie", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "brewerie", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Beer> beers;
 }
